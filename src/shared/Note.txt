@@ -1,0 +1,15 @@
+서버와 클라이언트에서 공용으로 사용되는 컴포넌트 App.js 가 여기에 위치합니다.
+
+
+| 라우트 파라미터 읽기
+ - 라우트의 경로에 특정 값을 넣는 방법을 알아보자.
+  => params를 사용하는 것과 query를 사용하는 것.
+
+  - history: 이 객체를 통해 push, replace를 통해 다른 경로로 이동하거나 앞 뒤 페이지로 전환 가능.
+  - location: 이 객체는 현재 경로에 대한 정보를 지니고 있고, URL 쿼리 (/about?foo=bar 형식)정보도 가지고있다.
+  - match: 이 객체는 어떤 라우트에 매칭이 되었는지에 대한 정보가 있고 params /about/:name 형식) 정보를 가지고있다.
+
+  params => 
+   - <Route path="/about/:name" component={About} />
+
+Switch 컴포넌트 사용시 컴포넌트 매칭을 시킬 수있다.
