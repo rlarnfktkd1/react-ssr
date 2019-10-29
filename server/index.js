@@ -5,13 +5,13 @@ const fs = require("fs");
 const app = new Koa();
 
 const indexHtml = fs.readFileSync(
-  path.resolve(__dirname, "../../build/index.html"),
+  path.resolve(__dirname, "../build/index.html"),
   { encoding: "utf8" }
 );
 
-app.use(serve(path.resolve(__dirname, "../../build")));
+app.use(serve(path.resolve(__dirname, "../build")));
 app.use(ctx => {
-  ctx.body = "Hello World";
+  ctx.body = indexHtml;
 });
 
 const serverStart = () => console.log("Server Start!! ");
